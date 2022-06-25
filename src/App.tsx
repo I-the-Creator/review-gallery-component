@@ -1,26 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Slider } from './components/slider';
+import image from './image.jpg';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div
+			style={{
+				display: 'flex',
+				justifyContent: 'center',
+				alignItems: 'center',
+				height: '100vh',
+			}}
+		>
+			<Slider
+				reviews={[
+					{
+						id: 1,
+						name: 'Дана Воронцова',
+						jobPosition: 'Продавец',
+						text: 'Доходы и расходы как на ладони',
+						image,
+					},
+                    {
+						id: 2,
+						name: 'Катерина Воронцова',
+						jobPosition: 'Менеджер',
+						text: 'Доходы и расходы как на ладони. Отлично',
+						image,
+					}
+				]}
+			/>
+		</div>
+	);
 }
 
 export default App;
