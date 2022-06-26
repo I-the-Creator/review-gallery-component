@@ -1,6 +1,7 @@
 import React from 'react';
 import { Slider } from './components/slider';
 import image from './image.jpg';
+import dummy from '../src/data/dummy.json';
 
 function App() {
 	return (
@@ -15,10 +16,10 @@ function App() {
 			<Slider
 				reviews={[
 					{
-						id: 1,
-						name: 'Дана Воронцова',
-						jobPosition: 'Продавец',
-						text: 'Доходы и расходы как на ладони',
+						id: dummy[0].id,
+						name: dummy[0].name,
+						jobPosition: dummy[0].jobPosition,
+						text: dummy[0].text,
 						image,
 					},
                     {
@@ -26,6 +27,13 @@ function App() {
 						name: 'Катерина Воронцова',
 						jobPosition: 'Менеджер',
 						text: 'Доходы и расходы как на ладони. Отлично',
+						image,
+					},
+					{
+						id: 3,
+						name: 'Дмитрий Петров',
+						jobPosition: 'Директор',
+						text: 'Все работает как часы. Очень удобно',
 						image,
 					}
 				]}
